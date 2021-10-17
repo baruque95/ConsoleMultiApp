@@ -83,10 +83,22 @@ namespace ConsoleMultiApp
                         break;
                     case 5:
                         // PETS
-                        Console.WriteLine("Cadastro de Pets");
+                        int i;
+                        Pets pets = new Pets();
+
+                        for (i = 0; i < 6; i++)
+                        {
+                            string nome = pets.
+                        }
+
+                        
+
+
+
+
+
                         break;
                     case 6:
-                        // ENCERRAR
                         Console.WriteLine("Programa encerrado");
                         break;
                 }
