@@ -43,7 +43,15 @@ namespace ConsoleMultiApp
                         break;
                     case 2:
                         // SALARIO
-                        Console.WriteLine("Salários mínimos");
+                        double salario;
+                        double salarioMinimo;
+                        double minimos;
+
+                        Salario minimo = new Salario();
+
+                        salario = minimo.getSalario();
+                        salarioMinimo = minimo.getSalarioMinimo();
+                        minimo.getMinimos(salario, salarioMinimo);
                         break;
                     case 3:
                         // VOLUME ESFERA

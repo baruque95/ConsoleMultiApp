@@ -12,8 +12,19 @@ namespace ConsoleMultiApp
         {
             double peso;
             Console.WriteLine("\n Digite o seu peso em kg (separado por vírgula) : ");
+            Console.WriteLine("\n (Valor mínimo = 30,0 kg!)");
             peso = Convert.ToDouble(Console.ReadLine());
 
+            while (peso <= 30) 
+            {
+                Console.WriteLine("\n## {0} é um valor INVÁLIDO. Tente novamente: ##", peso);
+                Console.WriteLine("\nDigite o seu peso em kg (separado por vírgula) : ");
+                Console.WriteLine("\n(Valor mínimo = 30,0 kg!)");
+                peso = Convert.ToDouble(Console.ReadLine());
+            }
+
+            
+            
             return peso;
         }
 
