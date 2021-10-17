@@ -20,14 +20,16 @@ namespace ConsoleMultiApp
 
             opcao = Convert.ToInt32(Console.ReadLine());
 
-            // Programa quebra feio se coloca letra no input de opção!!
+            
+
+            // Programa quebra feio se coloca letra no input de opção!
 
             if (opcao > 0 && opcao < 7)
             {
                 switch (opcao)
                 {
                     case 1:
-                        // IMC
+                        // IMC 
                         
                         break;
                     case 2:

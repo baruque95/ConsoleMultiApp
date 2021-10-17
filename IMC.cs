@@ -6,20 +6,33 @@ using System.Threading.Tasks;
 
 namespace ConsoleMultiApp
 {
-    class IMC
+    class IMCService
     {
-        int getPeso()
+        private double getPeso()
         {
-            int peso;
+            double peso;
             Console.WriteLine("Digite o seu peso: ");
-            peso = Convert.ToInt32(Console.ReadLine());
+            peso = Convert.ToDouble(Console.ReadLine());
 
             return peso;
         }
 
-        int calculaIMC(int peso, int altura)
+        private double getAltura()
         {
+            double altura;
+            Console.WriteLine("Digite a sua altura: ");
+            altura = Convert.ToDouble(Console.ReadLine());
 
+            return altura;
+        }
+
+        public double getIMC(double peso, double altura)
+        {
+            double imc;
+            double alturaPot = Math.Pow(altura, 2);
+            imc = peso / alturaPot;
+
+            return imc;
         }
     }
 }
