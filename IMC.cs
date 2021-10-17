@@ -28,11 +28,13 @@ namespace ConsoleMultiApp
 
         public double getIMC(double peso, double altura)
         {
-            double imc;
+            double imcTotal;
             double alturaPot = Math.Pow(altura, 2);
-            imc = peso / alturaPot;
+            imcTotal = peso / alturaPot;
 
-            return imc;
+            Console.WriteLine("O seu IMC é de {0}", imcTotal);
+
+            return imcTotal;
         }
 
         public void definePeso(double imc)

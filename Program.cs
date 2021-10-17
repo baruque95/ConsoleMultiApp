@@ -37,9 +37,7 @@ namespace ConsoleMultiApp
                         IMC imc = new IMC();
                         peso = imc.getPeso();
                         altura = imc.getAltura();
-                        imcTotal = imc.getIMC(peso, altura); 
-                        
-                        Console.WriteLine("\n\nO seu IMC é igual a {0}", imcTotal);
+                        imcTotal = imc.getIMC(peso, altura);
                         imc.definePeso(imcTotal);
 
                         break;
