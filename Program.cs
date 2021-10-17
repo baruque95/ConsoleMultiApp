@@ -66,7 +66,20 @@ namespace ConsoleMultiApp
                         break;
                     case 4:
                         // MEDIA ALUNOS
-                        Console.WriteLine("Calculo da média");
+                        double nota1;
+                        double nota2;
+                        double nota3;
+                        double media;
+
+                        Notas nota = new Notas();
+
+                        nota1 = nota.getNota();
+                        nota2 = nota.getNota();
+                        nota3 = nota.getNota();
+                        media = nota.getMedia(nota1, nota2, nota3);
+
+                        nota.getApRep(media);
+                        
                         break;
                     case 5:
                         // PETS
