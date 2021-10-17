@@ -20,9 +20,9 @@ namespace ConsoleMultiApp
 
             opcao = Convert.ToInt32(Console.ReadLine());
 
-            
-
             // Programa quebra feio se coloca letra no input de opção!
+
+
 
             if (opcao > 0 && opcao < 7)
             {
@@ -30,7 +30,18 @@ namespace ConsoleMultiApp
                 {
                     case 1:
                         // IMC 
+                        double peso;
+                        double altura;
+                        double imcTotal;
+
+                        IMC imc = new IMC();
+                        peso = imc.getPeso();
+                        altura = imc.getAltura();
+                        imcTotal = imc.getIMC(peso, altura); 
                         
+                        Console.WriteLine("\n\nO seu IMC é igual a {0}", imcTotal);
+                        imc.definePeso(imcTotal);
+
                         break;
                     case 2:
                         // SALARIO

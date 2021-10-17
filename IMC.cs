@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleMultiApp
 {
-    class IMCService
+    class IMC
     {
-        private double getPeso()
+        public double getPeso()
         {
             double peso;
-            Console.WriteLine("Digite o seu peso: ");
+            Console.WriteLine("\n Digite o seu peso em kg (separado por vírgula) : ");
             peso = Convert.ToDouble(Console.ReadLine());
 
             return peso;
         }
 
-        private double getAltura()
+        public double getAltura()
         {
             double altura;
-            Console.WriteLine("Digite a sua altura: ");
+            Console.WriteLine("\n Digite a sua altura em Metros (separado por vírgula) : \n");
             altura = Convert.ToDouble(Console.ReadLine());
 
             return altura;
@@ -33,6 +33,20 @@ namespace ConsoleMultiApp
             imc = peso / alturaPot;
 
             return imc;
+        }
+
+        public void definePeso(double imc)
+        {
+            if (imc < 20)
+            {
+                Console.WriteLine("Você está abaixo do peso.");
+            } else if (imc >= 20 && imc < 25)
+            {
+                Console.WriteLine("Você está no peso ideal.");
+            } else
+            {
+                Console.WriteLine("Você está acima do peso.");
+            }
         }
     }
 }
