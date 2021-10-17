@@ -21,10 +21,7 @@ namespace ConsoleMultiApp
                 Console.WriteLine("\nDigite o seu peso em kg (separado por vírgula) : ");
                 Console.WriteLine("\n(Valor mínimo = 30,0 kg!)");
                 peso = Convert.ToDouble(Console.ReadLine());
-            }
-
-            
-            
+            }           
             return peso;
         }
 

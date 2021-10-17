@@ -55,7 +55,14 @@ namespace ConsoleMultiApp
                         break;
                     case 3:
                         // VOLUME ESFERA
-                        Console.WriteLine("Volume da esfera");
+
+                        double raio;
+                        double volume;
+
+                        Raio calcVolume = new Raio();
+
+                        raio = Convert.ToDouble(calcVolume.getRaio());
+                        calcVolume.getVolume(raio);
                         break;
                     case 4:
                         // MEDIA ALUNOS
