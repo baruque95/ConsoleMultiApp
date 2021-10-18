@@ -28,16 +28,8 @@ namespace ConsoleMultiApp
                 {
                     case 1:
                         // IMC 
-                        double peso;
-                        double altura;
-                        double imcTotal;
-
                         IMC imc = new IMC();
-                        peso = imc.getPeso();
-                        altura = imc.getAltura();
-                        imcTotal = imc.getIMC(peso, altura);
-                        imc.definePeso(imcTotal);
-
+                        imc.getIMC();
                         break;
                     case 2:
                         // SALARIO
@@ -79,15 +71,8 @@ namespace ConsoleMultiApp
                         
                         break;
                     case 5:
-                        // PETS
-                        Pets pets = new Pets();
-                        Pets pet1 = new Pets();
-                        Pets pet2 = new Pets();
-                        Pets pet3 = new Pets();
-                        Pets pet4 = new Pets();
-                        Pets pet5 = new Pets();
-
-                        pets.imprimeQtd();
+                        Petshop petshop = new Petshop();
+                        petshop.cadastroPets();
 
                         break;
                     case 6:

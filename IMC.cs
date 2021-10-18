@@ -8,7 +8,7 @@ namespace ConsoleMultiApp
 {
     class IMC
     {
-        public double getPeso()
+        private double getPeso()
         {
             double peso;
             Console.WriteLine("\n Digite o seu peso em kg (separado por vírgula) : ");
@@ -25,7 +25,7 @@ namespace ConsoleMultiApp
             return peso;
         }
 
-        public double getAltura()
+        private double getAltura()
         {
             double altura;
             Console.WriteLine("\n Digite a sua altura em Metros (separado por vírgula) : \n");
@@ -34,18 +34,25 @@ namespace ConsoleMultiApp
             return altura;
         }
 
-        public double getIMC(double peso, double altura)
+        public double getIMC()
         {
+
+            double peso;
+            double altura;
             double imcTotal;
+
+            peso = this.getPeso();
+            altura = this.getAltura();
             double alturaPot = Math.Pow(altura, 2);
             imcTotal = peso / alturaPot;
-
             Console.WriteLine("O seu IMC é de {0}", imcTotal);
+
+            definePeso(imcTotal);            
 
             return imcTotal;
         }
 
-        public void definePeso(double imc)
+        private void definePeso(double imc)
         {
             if (imc < 20)
             {
