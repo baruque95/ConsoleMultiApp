@@ -22,8 +22,6 @@ namespace ConsoleMultiApp
 
             // Programa quebra feio se coloca letra no input de opção!
 
-
-
             if (opcao > 0 && opcao < 7)
             {
                 switch (opcao)
@@ -57,7 +55,6 @@ namespace ConsoleMultiApp
                         // VOLUME ESFERA
 
                         double raio;
-                        double volume;
 
                         Raio calcVolume = new Raio();
 
@@ -83,19 +80,14 @@ namespace ConsoleMultiApp
                         break;
                     case 5:
                         // PETS
-                        int i;
                         Pets pets = new Pets();
+                        Pets pet1 = new Pets();
+                        Pets pet2 = new Pets();
+                        Pets pet3 = new Pets();
+                        Pets pet4 = new Pets();
+                        Pets pet5 = new Pets();
 
-                        for (i = 0; i < 6; i++)
-                        {
-                            string nome = pets.
-                        }
-
-                        
-
-
-
-
+                        pets.imprimeQtd();
 
                         break;
                     case 6:
@@ -105,6 +97,7 @@ namespace ConsoleMultiApp
             } else
             {
                 Console.WriteLine("Comando inválido.");
+                Console.WriteLine("Programa encerrado");
             }
         }
     }
